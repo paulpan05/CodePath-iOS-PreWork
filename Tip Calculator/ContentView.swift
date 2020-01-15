@@ -10,6 +10,9 @@ import SwiftUI
 
 struct SharedStates {
     public var tipAmounts: [String] = ["10", "15", "20"]
+    public var moneySelections: [String] = ["USD", "EUR", "GBP", "RMB", "BTC"]
+    public var currencySymbols: [String] = ["$", "€", "£", "¥", "₿"]
+    public var moneySelectIndex: Int = 0
 }
 
 struct ContentView: View {

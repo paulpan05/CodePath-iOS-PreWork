@@ -38,7 +38,7 @@ struct MoneyInput: View {
     var body: some View {
         VStack {
             VStack{
-                TextField("$", text: $amount).keyboardType(.decimalPad).font(.system(size: 78)).multilineTextAlignment(.trailing)
+                TextField(self.states.currencySymbols[self.states.moneySelectIndex], text: $amount).keyboardType(.decimalPad).font(.system(size: 78)).multilineTextAlignment(.trailing)
                 Spacer()
                 Picker("Tip Amount", selection: $selectionIndex) {
                     Text((self.states.tipAmounts[0].isEmpty ? "0" : self.states.tipAmounts[0]) + "%").tag(0)
@@ -52,33 +52,33 @@ struct MoneyInput: View {
                 HStack {
                     Text("+").font(.system(size: 20))
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTip()))").font(.system(size: 20))
+                    Text(self.states.currencySymbols[self.states.moneySelectIndex] + String(format: "%.2f", calculateTip())).font(.system(size: 20))
                 }
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal()))").font(.system(size: 70)).frame(height: frameHeight)
+                    Text(self.states.currencySymbols[self.states.moneySelectIndex] + String(format: "%.2f", calculateTotal())).font(.system(size: 70)).frame(height: frameHeight)
                 }
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal() * 2))").font(.system(size: 60)).frame(height: frameHeight)
-                }
-                HStack {
-                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
-                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
-                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
-                    Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal() * 3))").font(.system(size: 50)).frame(height: frameHeight)
+                    Text(self.states.currencySymbols[self.states.moneySelectIndex] + String(format: "%.2f", calculateTotal() * 2)).font(.system(size: 60)).frame(height: frameHeight)
                 }
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
+                    Spacer()
+                    Text(self.states.currencySymbols[self.states.moneySelectIndex] + String(format: "%.2f", calculateTotal() * 3)).font(.system(size: 50)).frame(height: frameHeight)
+                }
+                HStack {
+                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
+                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
+                    Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal() * 4))").font(.system(size: 40)).frame(height: frameHeight)
+                    Text(self.states.currencySymbols[self.states.moneySelectIndex] + String(format: "%.2f", calculateTotal() * 4)).font(.system(size: 40)).frame(height: frameHeight)
                 }
             }
             .padding(.all)
