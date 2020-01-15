@@ -23,7 +23,7 @@ struct MoneyInput: View {
         currentColor = currentColor.opacity(0.4)
         return currentColor
     }
-    private let curDimension: CGFloat = 32
+    private let curDimension: CGFloat = 15
     private let frameHeight: CGFloat = 52
     func calculateTip() -> Double {
         var result = Double(amount) ?? 0
@@ -57,13 +57,13 @@ struct MoneyInput: View {
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal()))").font(.system(size: 80)).frame(height: frameHeight)
+                    Text("\(String(format: "%.2f", calculateTotal()))").font(.system(size: 70)).frame(height: frameHeight)
                 }
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal() * 2))").font(.system(size: 65)).frame(height: frameHeight)
+                    Text("\(String(format: "%.2f", calculateTotal() * 2))").font(.system(size: 60)).frame(height: frameHeight)
                 }
                 HStack {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
@@ -78,7 +78,7 @@ struct MoneyInput: View {
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Image("Person").resizable().aspectRatio(1, contentMode: .fit).frame(width: curDimension, height: curDimension)
                     Spacer()
-                    Text("\(String(format: "%.2f", calculateTotal() * 4))").font(.system(size: 35)).frame(height: frameHeight)
+                    Text("\(String(format: "%.2f", calculateTotal() * 4))").font(.system(size: 40)).frame(height: frameHeight)
                 }
             }
             .padding(.all)
