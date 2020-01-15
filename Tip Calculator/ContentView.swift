@@ -11,7 +11,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            MoneyInput()
+            NavigationView {
+                MoneyInput()
+                    .navigationBarTitle(Text("Tip Calculator"), displayMode: .inline)
+                    .navigationBarItems(trailing:
+                        NavigationLink(destination: Settings()) {
+                            Image("Settings").resizable().frame(width: 30, height: 30)
+                        }
+                    )
+            }
         }
     }
 }
