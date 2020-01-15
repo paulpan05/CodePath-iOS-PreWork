@@ -15,9 +15,9 @@ extension UIApplication {
 }
 
 struct MoneyInput: View {
+    @Binding public var states: SharedStates
     @State private var amount: String = ""
     @State private var selectionIndex: Int = 0
-    @State private var tipAmount = ["10%", "15%", "20%"]
     private var calculatedColor: Color {
         var currentColor = Color.green
         currentColor = currentColor.opacity(0.4)
@@ -27,12 +27,12 @@ struct MoneyInput: View {
     private let frameHeight: CGFloat = 52
     func calculateTip() -> Double {
         var result = Double(amount) ?? 0
-        result = result * (0.1 + Double(selectionIndex) * 0.05)
+        result = result * (Double(states.tipAmounts[selectionIndex]) ?? 0) / 100
         return result
     }
     func calculateTotal() -> Double {
         var result = Double(amount) ?? 0
-        result = result * (1.1 + Double(selectionIndex) * 0.05)
+        result = result * (100 + (Double(states.tipAmounts[selectionIndex]) ?? 0)) / 100
         return result
     }
     var body: some View {
@@ -41,9 +41,9 @@ struct MoneyInput: View {
                 TextField("$", text: $amount).keyboardType(.decimalPad).font(.system(size: 78)).multilineTextAlignment(.trailing)
                 Spacer()
                 Picker("Tip Amount", selection: $selectionIndex) {
-                    ForEach(0 ..< tipAmount.count) {index in
-                        Text(self.tipAmount[index]).tag(index)
-                    }
+                    Text((self.states.tipAmounts[0].isEmpty ? "0" : self.states.tipAmounts[0]) + "%").tag(0)
+                    Text((self.states.tipAmounts[1].isEmpty ? "0" : self.states.tipAmounts[1]) + "%").tag(1)
+                    Text((self.states.tipAmounts[2].isEmpty ? "0" : self.states.tipAmounts[2]) + "%").tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
             }
@@ -92,6 +92,6 @@ struct MoneyInput: View {
 
 struct MoneyInput_Previews: PreviewProvider {
     static var previews: some View {
-        MoneyInput()
+        MoneyInput(states: .constant(SharedStates()))
     }
 }
