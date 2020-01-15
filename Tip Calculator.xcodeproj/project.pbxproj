@@ -16,6 +16,7 @@
 		A3286D5A23CE806C0013227D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3286D5823CE806C0013227D /* LaunchScreen.storyboard */; };
 		A3286D6523CE806C0013227D /* Tip_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3286D6423CE806C0013227D /* Tip_CalculatorTests.swift */; };
 		A3286D7023CE806C0013227D /* Tip_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3286D6F23CE806C0013227D /* Tip_CalculatorUITests.swift */; };
+		A3286D7F23CE8DCD0013227D /* MoneyInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3286D7E23CE8DCD0013227D /* MoneyInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A3286D6B23CE806C0013227D /* Tip CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tip CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3286D6F23CE806C0013227D /* Tip_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip_CalculatorUITests.swift; sourceTree = "<group>"; };
 		A3286D7123CE806C0013227D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3286D7E23CE8DCD0013227D /* MoneyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		A3286D4923CE806B0013227D /* Tip Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				A3286D7D23CE8D8A0013227D /* Views */,
 				A3286D4A23CE806B0013227D /* AppDelegate.swift */,
 				A3286D4C23CE806B0013227D /* SceneDelegate.swift */,
 				A3286D5123CE806B0013227D /* ContentView.swift */,
@@ -137,6 +140,14 @@
 				A3286D7123CE806C0013227D /* Info.plist */,
 			);
 			path = "Tip CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		A3286D7D23CE8D8A0013227D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3286D7E23CE8DCD0013227D /* MoneyInput.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +285,7 @@
 				A3286D5023CE806B0013227D /* Tip_Calculator.xcdatamodeld in Sources */,
 				A3286D5223CE806B0013227D /* ContentView.swift in Sources */,
 				A3286D4D23CE806B0013227D /* SceneDelegate.swift in Sources */,
+				A3286D7F23CE8DCD0013227D /* MoneyInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tip Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ZW524U785;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -459,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tip Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ZW524U785;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
