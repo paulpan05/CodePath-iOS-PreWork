@@ -19,7 +19,7 @@ struct MoneyInput: View {
     @State private var amount: String = ""
     @State private var selectionIndex: Int = 0
     private var calculatedColor: Color {
-        var currentColor = Color.green
+        var currentColor = states.colors[states.colorSelectIndex]
         currentColor = currentColor.opacity(0.4)
         return currentColor
     }
@@ -82,7 +82,7 @@ struct MoneyInput: View {
                 }
             }
             .padding(.all)
-            .background(Color.green)
+            .background(states.colors[states.colorSelectIndex])
             .onTapGesture {
                 UIApplication.shared.endEditing()
             }

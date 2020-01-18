@@ -33,7 +33,9 @@ struct Settings: View {
                 TextField("", text: $states.tipAmounts[2]).background(Color.gray).frame(width: frameWidth).keyboardType(.numberPad).multilineTextAlignment(.center).cornerRadius(cornerRadius)
                 Text("%")
             }
-            Picker("Tip Amount", selection: $states.moneySelectIndex) {
+            .padding(.bottom)
+            Text("Currency Type:")
+            Picker("Currency Type", selection: $states.moneySelectIndex) {
                 Text(self.states.moneySelections[0]).tag(0)
                 Text(self.states.moneySelections[1]).tag(1)
                 Text(self.states.moneySelections[2]).tag(2)
@@ -41,8 +43,18 @@ struct Settings: View {
                 Text(self.states.moneySelections[4]).tag(4)
             }
             .pickerStyle(SegmentedPickerStyle())
+            .padding(.bottom)
+            Text("Color Scheme:")
+            Picker("Color Scheme", selection: $states.colorSelectIndex) {
+                Text(self.states.colorStrings[0]).tag(0)
+                Text(self.states.colorStrings[1]).tag(1)
+                Text(self.states.colorStrings[2]).tag(2)
+                Text(self.states.colorStrings[3]).tag(3)
+                Text(self.states.colorStrings[4]).tag(4)
+            }
+            .pickerStyle(SegmentedPickerStyle())
             Spacer()
-        }
+        }.padding(.all)
     }
 }
 

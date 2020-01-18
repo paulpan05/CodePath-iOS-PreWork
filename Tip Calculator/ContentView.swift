@@ -12,7 +12,10 @@ struct SharedStates {
     public var tipAmounts: [String] = ["10", "15", "20"]
     public var moneySelections: [String] = ["USD", "EUR", "GBP", "RMB", "BTC"]
     public var currencySymbols: [String] = ["$", "€", "£", "¥", "₿"]
+    public var colorStrings: [String] = ["green", "blue", "red", "purple", "orange"]
+    public var colors: [Color] = [Color.green, Color.blue, Color.red, Color.purple, Color.orange]
     public var moneySelectIndex: Int = 0
+    public var colorSelectIndex: Int = 0
 }
 
 struct ContentView: View {
