@@ -1,0 +1,4 @@
+use_frameworks!
+target 'Tip Calculator' do
+    pod 'Introspect'
+end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47F77977400E8655D0AC2EDA /* Pods_Tip_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6257C5B9F8213CD9E7E848F /* Pods_Tip_Calculator.framework */; };
 		A3286D4B23CE806B0013227D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3286D4A23CE806B0013227D /* AppDelegate.swift */; };
 		A3286D4D23CE806B0013227D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3286D4C23CE806B0013227D /* SceneDelegate.swift */; };
 		A3286D5023CE806B0013227D /* Tip_Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3286D4E23CE806B0013227D /* Tip_Calculator.xcdatamodeld */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73A999848F7BD3D4ECF740C8 /* Pods-Tip Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip Calculator.release.xcconfig"; path = "Target Support Files/Pods-Tip Calculator/Pods-Tip Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		868D8978281815689E442825 /* Pods-Tip Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tip Calculator.debug.xcconfig"; path = "Target Support Files/Pods-Tip Calculator/Pods-Tip Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		A3286D4723CE806B0013227D /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3286D4A23CE806B0013227D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3286D4C23CE806B0013227D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		A3286D7123CE806C0013227D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3286D7E23CE8DCD0013227D /* MoneyInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyInput.swift; sourceTree = "<group>"; };
 		A3286D8023CF24250013227D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D6257C5B9F8213CD9E7E848F /* Pods_Tip_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tip_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47F77977400E8655D0AC2EDA /* Pods_Tip_Calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FF1F617292657954D850097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				868D8978281815689E442825 /* Pods-Tip Calculator.debug.xcconfig */,
+				73A999848F7BD3D4ECF740C8 /* Pods-Tip Calculator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8B240EDC191B0113BC95B618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6257C5B9F8213CD9E7E848F /* Pods_Tip_Calculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A3286D3E23CE806B0013227D = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +112,8 @@
 				A3286D6323CE806C0013227D /* Tip CalculatorTests */,
 				A3286D6E23CE806C0013227D /* Tip CalculatorUITests */,
 				A3286D4823CE806B0013227D /* Products */,
+				7FF1F617292657954D850097 /* Pods */,
+				8B240EDC191B0113BC95B618 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3286D7423CE806C0013227D /* Build configuration list for PBXNativeTarget "Tip Calculator" */;
 			buildPhases = (
+				A435C348B12F1B5181793010 /* [CP] Check Pods Manifest.lock */,
 				A3286D4323CE806B0013227D /* Sources */,
 				A3286D4423CE806B0013227D /* Frameworks */,
 				A3286D4523CE806B0013227D /* Resources */,
+				7BD79836E0F49396596A7672 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +305,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BD79836E0F49396596A7672 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tip Calculator/Pods-Tip Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tip Calculator/Pods-Tip Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tip Calculator/Pods-Tip Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A435C348B12F1B5181793010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tip Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3286D4323CE806B0013227D /* Sources */ = {
@@ -452,6 +521,7 @@
 		};
 		A3286D7523CE806C0013227D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868D8978281815689E442825 /* Pods-Tip Calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +542,7 @@
 		};
 		A3286D7623CE806C0013227D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A999848F7BD3D4ECF740C8 /* Pods-Tip Calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Introspect
 
 extension UIApplication {
     func endEditing() {
@@ -38,7 +39,13 @@ struct MoneyInput: View {
     var body: some View {
         VStack {
             VStack{
-                TextField(self.states.currencySymbols[self.states.moneySelectIndex], text: $amount).keyboardType(.decimalPad).font(.system(size: 78)).multilineTextAlignment(.trailing)
+                TextField(self.states.currencySymbols[self.states.moneySelectIndex], text: $amount)
+                    .keyboardType(.decimalPad)
+                    .font(.system(size: 78))
+                    .multilineTextAlignment(.trailing)
+                    .introspectTextField { textfield in
+                        textfield.becomeFirstResponder();
+                }
                 Spacer()
                 Picker("Tip Amount", selection: $selectionIndex) {
                     Text((self.states.tipAmounts[0].isEmpty ? "0" : self.states.tipAmounts[0]) + "%").tag(0)
