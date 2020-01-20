@@ -33,7 +33,9 @@ GIF created with [ezgif](https://ezgif.com/video-to-gif).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Getting the currency to update in the main view apart from the setting page is somewhat difficult since the states of the tip amount and currency need to be shared between different views. I managed to solve it by creating a struct that is passed in to each of the sub-views when creating the app, having the main contentview encompass both the settings and main view.
+
+Spacing the app correctly for multiple device sizes is difficult, I had to make sure the ratios of the boxes are correct so the tips and settings are displayed reasonably on different devices.
 
 ## License
 
